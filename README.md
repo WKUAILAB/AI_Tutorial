@@ -1,5 +1,5 @@
 # AI-LAB
-This is the tutorial for AI-LAB in Wenzhou-Kean University. \
+This is AI-LAB in Wenzhou-Kean University. \
 We have two part, Computer Vision and Natural Language Processing. 
 ## Computer Vision
 Please go to the folder CV to see the detailed information. \
