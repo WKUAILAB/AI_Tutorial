@@ -47,6 +47,6 @@ The plan is as follows:
         - **Paper** for classical paper in CV
         - **CS231n** for ppt
         - **Code** for paper algorithm coding
-    - Upload the PPT CS231n. 
+    - Upload the PPT [CS231n](https://github.com/LOUEY233/AI-LAB/tree/main/CV/CS231n).
 
 
