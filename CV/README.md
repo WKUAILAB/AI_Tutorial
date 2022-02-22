@@ -43,7 +43,7 @@ The plan is as follows:
 ## Logs
 - **2022.2.22** 
     - Create the github website for AI-LAB.
-    - Create floder
+    - Create folder
         - **Paper** for classical paper in CV
         - **CS231n** for ppt
         - **Code** for paper algorithm coding
