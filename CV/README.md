@@ -21,7 +21,7 @@ The tutorial we will use is CS231n from Stanford University. (**Folder CS231n**)
 
 The plan is as follows:
 - Week1-3 
-    - Introduction to Computer Vision. \
+    - Introduction to Computer Vision. 
     - Classical Network: LeNet, AlexNet, GoogLeNet, VGG, ResNet, MobileNet, SqueezeNet.
 - Week4 
     - Generative Adversarial Network
