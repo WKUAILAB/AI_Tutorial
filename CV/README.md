@@ -12,7 +12,7 @@
         - [Chinese document](https://www.tensorflow.org/?hl=zh-cn)
     - [Keras](https://keras.io/)
         - [Chinese document](https://keras.io/zh/)
-- **Install** If you have gpu on your desktop you can install the GPU version(please note that install the consistant cuda, cudnn, pytorch [instruction](https://zhuanlan.zhihu.com/p/88903659)/tensorflow version [instruction](https://tensorflow.juejin.im/install/install_windows.html)), if not, you can install the CPU version.
+- **Install** If you have gpu on your desktop you can install the GPU version(please note that install the consistent cuda, cudnn, pytorch [instruction](https://zhuanlan.zhihu.com/p/88903659)/tensorflow version [instruction](https://tensorflow.juejin.im/install/install_windows.html)), if not, you can install the CPU version.
 ---
 ## Plan in 2022 Spring
 This semester, we will hold some seminars talking about classical networks and algorithm design! Hope everyone enjoys the learning together. 
