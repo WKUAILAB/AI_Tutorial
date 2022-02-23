@@ -15,7 +15,7 @@
 - **Install** If you have gpu on your desktop you can install the GPU version(please note that install the consistent cuda, cudnn, pytorch [instruction](https://zhuanlan.zhihu.com/p/88903659)/tensorflow version [instruction](https://tensorflow.juejin.im/install/install_windows.html)), if not, you can install the CPU version.
 ---
 ## Plan in 2022 Spring
-This semester, we will hold some seminars talking about classical networks and algorithm design! Hope everyone enjoys the learning together. 
+This semester, we will hold some seminars talking about classical networks and algorithm design! Hope everyone enjoys the learning together.
 
 The tutorial we will use is CS231n from Stanford University. (**Folder CS231n**) 
 
@@ -47,7 +47,7 @@ The plan is as follows:
         - **Paper** for classical paper in CV
         - **CS231n** for ppt
         - **Code** for paper algorithm coding
-    - Upload the PPT [CS231n](https://github.com/LOUEY233/AI-LAB/tree/main/CV/CS231n).
-    - Upload the classical [paper](https://github.com/LOUEY233/AI-LAB/tree/main/CV/Paper/Week1-3)
+    - Upload the PPT [CS231n](/CV/CS231n/).
+    - Upload the classical [paper](/CV/Paper/Week1-3/)
 
 
