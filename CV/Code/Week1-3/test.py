@@ -4,7 +4,6 @@ import torch
 from data_download import dataloader
 from network import *
 
-path = 'cifar_net.pth'
 def test(path):
     PATH = path
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -44,6 +43,8 @@ def test_for_all(path):
     with torch.no_grad():
         for data in testloader:
             images, labels = data
+            images = images.to(device)
+            labels = labels.to(device)
             outputs = net(images)
             _, predictions = torch.max(outputs, 1)
             # collect the correct predictions for each class
@@ -58,5 +59,6 @@ def test_for_all(path):
         print(f'Accuracy for class: {classname:5s} is {accuracy:.1f} %')
 
 if __name__ == '__main__':
-    test()
-    test_for_all()
+    path = 'cifar_net.pth'
+    test(path)
+    test_for_all(path)
