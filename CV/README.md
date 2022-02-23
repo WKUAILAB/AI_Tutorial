@@ -49,5 +49,11 @@ The plan is as follows:
         - **Code** for paper algorithm coding
     - Upload the PPT [CS231n](/CV/CS231n/).
     - Upload the classical [paper](/CV/Paper/Week1-3/)
+- **2022.2.23**
+    - Upload the network code
+        - LeNet
+        - VGG
+        - ResNet
+    - train, test code
 
 

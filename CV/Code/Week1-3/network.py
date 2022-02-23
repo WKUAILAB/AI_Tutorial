@@ -21,3 +21,9 @@ class Net(nn.Module):
         x = F.relu(self.fc2(x))
         x = self.fc3(x)
         return x
+
+if __name__ == '__name__':
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    net = Net(device)
+    total_num = sum(p.numel() for p in net.parameters())
+    print("total paramater:", total_num)

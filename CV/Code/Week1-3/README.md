@@ -1,9 +1,12 @@
 Week 1-3
 ---
-We introduce several networks. \
-Data: CIFAR-10. 
+- We introduce several networks. \
+    - pytorch exampl network
+    - LeNet
+    - VGG
+    - ResNet
 ---
-Download the data and show some examples
+Download the data(CIFAR-10) and show some examples
 ```
 python data_download.py
 ```

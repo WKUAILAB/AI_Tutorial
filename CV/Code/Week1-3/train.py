@@ -2,6 +2,9 @@ import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 import torch.optim as optim
 from network import *
+from ResNet import *
+from VGG import *
+from LeNet import *
 from data_download import dataloader
 from tqdm import tqdm
 import warnings
