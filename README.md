@@ -1,6 +1,6 @@
 # AI-LAB
-This is AI-LAB in Wenzhou-Kean University. \
-We have two part, Computer Vision and Natural Language Processing. 
+This is Wenzhou-Kean University AI-LAB. \
+Our research interests are in Computer Vision and Natural Language Processing. 
 ## Computer Vision
 Please go to the folder CV to see the detailed information. \
 Any question please contact lucha@kean.edu 
