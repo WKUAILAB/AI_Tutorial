@@ -37,7 +37,7 @@ The plan is as follows:
     - Contrastive Learning
 - Week12
     - Transfer Learning, Domain Adaptation
-- week13
+- Week13
     - Transformer in Vision
 ---
 ## Logs
