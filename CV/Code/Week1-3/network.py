@@ -22,8 +22,10 @@ class Net(nn.Module):
         x = self.fc3(x)
         return x
 
-if __name__ == '__name__':
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    net = Net(device)
+if __name__ == '__main__':
+    net = Net()
     total_num = sum(p.numel() for p in net.parameters())
     print("total paramater:", total_num)
+    input = torch.randn(1, 3, 32, 32)
+    out = net(input)
+    print(out.shape)
