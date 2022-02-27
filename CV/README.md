@@ -55,5 +55,7 @@ The plan is as follows:
         - VGG
         - ResNet
     - train, test code
+ - **2022.2.27**
+    - Hold the first seminar 7p.m.- 9p.m.
 
 
