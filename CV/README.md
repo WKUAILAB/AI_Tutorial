@@ -61,5 +61,5 @@ The plan is as follows:
         - convolutional neural network (component)
         - coding practice
         - Our faculty takes this photo.
-        ![picture](/log/Seminar1.jpg)
+        ![picture](https://github.com/WKUAILAB/AI-LAB/blob/main/CV/log/Seminar1.jpg?raw=true)
 
