@@ -56,6 +56,10 @@ The plan is as follows:
         - ResNet
     - train, test code
  - **2022.2.27**
-    - Hold the first seminar 7p.m.- 9p.m.
-
+    - hold the first seminar 7p.m.- 9p.m.
+        - introduction about the CV
+        - convolutional neural network (component)
+        - coding practice
+        - Our faculty takes this photo.
+        ![picture](/log/Seminar1.jpg)
 
