@@ -53,7 +53,7 @@ def train(net):
 
 if __name__ == '__main__':
     trainloader, testloader, classes,_ = dataloader()
-    net = Net().to(device)
+    net = LeNet5().to(device)
     total_num = sum(p.numel() for p in net.parameters())
     print("total paramater:",total_num)
     train(net)

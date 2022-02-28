@@ -1,14 +1,19 @@
 import torch
 import torch.nn as nn
 from collections import OrderedDict
-
+import PIL
+from PIL import Image
+from torchvision.transforms import transforms
+import matplotlib.pyplot as plt
+import cv2
+import numpy as np
 
 class C1(nn.Module):
     def __init__(self):
         super(C1, self).__init__()
 
         self.c1 = nn.Sequential(OrderedDict([
-            ('c1', nn.Conv2d(3, 6, kernel_size=(5, 5))),
+            ('c1', nn.Conv2d(1, 6, kernel_size=(5, 5))),
             ('relu1', nn.ReLU()),
             ('s1', nn.MaxPool2d(kernel_size=(2, 2), stride=2))
         ]))
@@ -98,16 +103,13 @@ class LeNet5(nn.Module):
 
         output += x
 
-        output = self.c3(output)
-        output = output.view(img.size(0), -1)
-        output = self.f4(output)
-        output = self.f5(output)
-        return output
+        output1 = self.c3(output)
+        output2 = output1.view(img.size(0), -1)
+        output3 = self.f4(output2)
+        output4 = self.f5(output3)
+        return output,output1,output2,output3,output4
 
 if __name__ == '__main__':
     model = LeNet5()
     total_num = sum(p.numel() for p in model.parameters())
     print("total paramater:", total_num)
-    input = torch.randn(1, 3, 32, 32)
-    out = model(input)
-    print(out.shape)

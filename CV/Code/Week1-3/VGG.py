@@ -61,7 +61,9 @@ def VGG19():
 if __name__ == '__main__':
     model = VGG16() #is VGG7(), the size is too small, we can not apply VGG16
     total_num = sum(p.numel() for p in model.parameters())
-    print("total paramater:", total_num)
+    # for p in model.parameters():
+    #     print(p.numel())
+    # print("total paramater:", total_num)
     input = torch.randn(1, 3, 32, 32)
     out = model(input)
     print(out.shape)
