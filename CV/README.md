@@ -68,5 +68,5 @@ The plan is as follows:
         - mathematics deduction
         - [coding](https://github.com/csinva/gan-vae-pretrained-pytorch) practice
         - recording our lives!
-        ![picture]https://github.com/WKUAILAB/AI-LAB/blob/main/CV/log/Seminar2_1.jpg?raw=true()
-        ![picture]https://github.com/WKUAILAB/AI-LAB/blob/main/CV/log/Seminar2_2.jpg?raw=true()
+        ![picture](https://github.com/WKUAILAB/AI-LAB/blob/main/CV/log/Seminar2_1.jpg?raw=true)
+        ![picture](https://github.com/WKUAILAB/AI-LAB/blob/main/CV/log/Seminar2_2.jpg?raw=true)
