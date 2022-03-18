@@ -56,14 +56,14 @@ The plan is as follows:
         - ResNet
     - train, test code
  - **2022.2.27**
-    - Changjie Lu held the first seminar 7p.m.- 9p.m.
+    - Changjie held the first seminar 7p.m.- 9p.m.
         - introduction about the CV
         - convolutional neural network (component)
         - coding practice
         - Our faculty takes this photo.
         ![picture](https://github.com/WKUAILAB/AI-LAB/blob/main/CV/log/Seminar1.jpg?raw=true)
  - **2022.3.18**
-    - Changjie Lu held the third seminar 7p.m.-9.p.m.
+    - Changjie held the third seminar 7p.m.-9.p.m.
         - introduction of VAE and GAN
         - mathematics deduction
         - [coding](https://github.com/csinva/gan-vae-pretrained-pytorch) practice
