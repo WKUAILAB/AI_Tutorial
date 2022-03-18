@@ -69,25 +69,26 @@ class BottleNeck(nn.Module):
     def forward(self, x):
         return nn.ReLU(inplace=True)(self.residual_function(x) + self.shortcut(x))
 
+
 class ResNet(nn.Module):
 
     def __init__(self, block, num_block, num_classes=10):
         super().__init__()
 
-        self.in_channels = 64
+        self.in_channels = 8
 
         self.conv1 = nn.Sequential(
-            nn.Conv2d(3, 64, kernel_size=3, padding=1, bias=False),
-            nn.BatchNorm2d(64),
+            nn.Conv2d(3, 8, kernel_size=3, padding=1, bias=False),
+            nn.BatchNorm2d(8),
             nn.ReLU(inplace=True))
         #we use a different inputsize than the original paper
         #so conv2_x's stride is 1
         self.conv2_x = self._make_layer(block, 8, num_block[0], 1)
         self.conv3_x = self._make_layer(block, 16, num_block[1], 2)
         self.conv4_x = self._make_layer(block, 32, num_block[2], 2)
-        self.conv5_x = self._make_layer(block, 64, num_block[3], 2)
+        self.conv5_x = self._make_layer(block, 24, num_block[3], 2)
         self.avg_pool = nn.AdaptiveAvgPool2d((1, 1))
-        self.fc = nn.Linear(64 * block.expansion, num_classes)
+        self.fc = nn.Linear(32 * block.expansion, num_classes)
 
     def _make_layer(self, block, out_channels, num_blocks, stride):
         """make resnet layers(by layer i didnt mean this 'layer' was the
@@ -117,7 +118,7 @@ class ResNet(nn.Module):
         output = self.conv2_x(output)
         output = self.conv3_x(output)
         output = self.conv4_x(output)
-        output = self.conv5_x(output)
+        # output = self.conv5_x(output)
         output = self.avg_pool(output)
         output = output.view(output.size(0), -1)
         output = self.fc(output)
@@ -151,6 +152,7 @@ def resnet152():
 
 if __name__ == '__main__':
     model = resnet18()
+    print(list(model.children()))
     total_num = sum(p.numel() for p in model.parameters())
     print("total paramater:", total_num)
     input = torch.randn(1, 3, 32, 32)

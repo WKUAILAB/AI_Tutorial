@@ -2,13 +2,13 @@ import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 import torch
 from data_download import dataloader
-from network import *
+from resnet_official import *
 
 def test(path):
     PATH = path
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-    net = Net().to(device)
+    net = ResNet18().to(device)
     net.load_state_dict(torch.load(PATH))
     _,testloader,_,_ = dataloader()
     correct = 0
@@ -26,7 +26,7 @@ def test(path):
             total += labels.size(0)
             correct += (predicted == labels).sum().item()
 
-    print(f'Accuracy of the network on the 10000 test images: {100 * correct // total} %')
+    print(f'Accuracy of the network on the 10000 test images: {100 * correct / total} %')
 
 def test_for_all(path):
     trainloader, testloader, classes, batch_size = dataloader()
@@ -37,7 +37,7 @@ def test_for_all(path):
     PATH = path
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-    net = Net().to(device)
+    net = ResNet18().to(device)
     net.load_state_dict(torch.load(PATH))
     # again no gradients needed
     with torch.no_grad():
@@ -59,6 +59,6 @@ def test_for_all(path):
         print(f'Accuracy for class: {classname:5s} is {accuracy:.1f} %')
 
 if __name__ == '__main__':
-    path = 'cifar_net.pth'
+    path = 'resnet.pth'
     test(path)
     test_for_all(path)

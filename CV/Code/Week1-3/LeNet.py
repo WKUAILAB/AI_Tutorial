@@ -13,7 +13,7 @@ class C1(nn.Module):
         super(C1, self).__init__()
 
         self.c1 = nn.Sequential(OrderedDict([
-            ('c1', nn.Conv2d(1, 6, kernel_size=(5, 5))),
+            ('c1', nn.Conv2d(3, 6, kernel_size=(3, 3))),
             ('relu1', nn.ReLU()),
             ('s1', nn.MaxPool2d(kernel_size=(2, 2), stride=2))
         ]))
@@ -28,7 +28,7 @@ class C2(nn.Module):
         super(C2, self).__init__()
 
         self.c2 = nn.Sequential(OrderedDict([
-            ('c2', nn.Conv2d(6, 16, kernel_size=(5, 5))),
+            ('c2', nn.Conv2d(6, 16, kernel_size=(3, 3))),
             ('relu2', nn.ReLU()),
             ('s2', nn.MaxPool2d(kernel_size=(2, 2), stride=2))
         ]))
@@ -43,7 +43,7 @@ class C3(nn.Module):
         super(C3, self).__init__()
 
         self.c3 = nn.Sequential(OrderedDict([
-            ('c3', nn.Conv2d(16, 120, kernel_size=(5, 5))),
+            ('c3', nn.Conv2d(16, 42, kernel_size=(3, 3))),
             ('relu3', nn.ReLU())
         ]))
 
@@ -57,7 +57,7 @@ class F4(nn.Module):
         super(F4, self).__init__()
 
         self.f4 = nn.Sequential(OrderedDict([
-            ('f4', nn.Linear(120, 84)),
+            ('f4', nn.Linear(4*4*42, 84)),
             ('relu4', nn.ReLU())
         ]))
 
@@ -104,12 +104,15 @@ class LeNet5(nn.Module):
         output += x
 
         output1 = self.c3(output)
+        # print(output1.size())
         output2 = output1.view(img.size(0), -1)
         output3 = self.f4(output2)
         output4 = self.f5(output3)
-        return output,output1,output2,output3,output4
+        return output4
 
 if __name__ == '__main__':
     model = LeNet5()
     total_num = sum(p.numel() for p in model.parameters())
+    input = torch.randn(1, 3, 32, 32)
     print("total paramater:", total_num)
+    # print(input.view(1,-1).size())
