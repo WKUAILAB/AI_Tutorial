@@ -70,3 +70,6 @@ The plan is as follows:
         - recording our lives!
         ![picture](https://github.com/WKUAILAB/AI-LAB/blob/main/CV/log/Seminar2_1.jpg?raw=true)
         ![picture](https://github.com/WKUAILAB/AI-LAB/blob/main/CV/log/Seminar2_2.jpg?raw=true)
+ - **2020.4.23**
+    - Changjie held the fourth seminar 7p.m.-9.p.m.
+        - introduction of domain adaptation
